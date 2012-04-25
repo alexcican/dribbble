@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Droid Serif', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.6em;
+  background: url("../images/pattern.jpg") #222;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #ea4c89;
+  color: #fff;
+}
+
+::selection {
+  background: #ea4c89;
+  color: #fff;
+}
+
+sup {
+  font-size: 0.65em;
+}
+
+a, a:visited, img, #indicator div span {
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+  color: #8aba56;
+  text-decoration: none;
+}
+
+a:hover, #indicator div span:hover {
+  color: #ea4c89;
+  cursor: pointer;
+}
+
+a:hover>img {
+  border-color: #8aba56 !important;
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+h1 {
+  font-weight: normal;
+  line-height: 1.6em;
+  margin-bottom: 9%;
+  position: relative;
+}
+
+/* Dribbble logo */
+h1 img {
+  width: 30%;
+  max-width: 183px;
+}
+
+/* footnote link in heading */
+h1 a {
+  font-size: 22px !important;
+  position: absolute;
+  bottom: -4%;
+  color: #fff !important;
+  padding: 11px 5px;
+}
+
+/* Step heading */
+h2 {
+  font-weight: normal;
+  font-size: 2.2em;
+  font-style: italic;
+  line-height: 1.6em;
+  margin-bottom: 0.4em;
+}
+
+p {
+  margin-bottom: 1.6em;
+}
+
+#main {
+  width: 95%;
+  max-width: 600px;
+  padding-bottom: 5%;
+}
+
+#main a img {
+  border: solid 6px #1a1a1a;
+  width: 45%;
+  max-width: 250px;
+}
+
+#indicator {
+  display: none;
+}
+
+footer {
+  border-top: solid 1px #333;
+  padding: 10% 5%;
+  font-size: 0.875em;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+#footnotes {
+  margin-bottom: 3.6em;
+  text-align: left;
+}
+
+#footnotes p span {
+  font-size: 1.25em;
+  vertical-align: -4%;
+}
+
+small {
+  display: inline-block;
+  width: 80%;
+  font-size: 1em;
+  color: #444;
+}
+
+.logo {
+  border-bottom: none !important;
+  filter: alpha(opacity=5);
+  -moz-opacity: 0.05;
+  -khtml-opacity: 0.05;
+  opacity: 0.05;
+  padding: 22px;
+  margin-top: 11px;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 980px){
+  /* move the content down less % */
+  #container {
+    width: 60%;
+    padding: 7% 10% 0;
+  }
+
+  /* adds left line to the content */
+  #main {
+    width: 80%;
+    position: relative;
+    border-left: solid 1px #333;
+    padding-left: 4em;
+  }
+
+  /* fix of the left border starting before content (hides top part) */
+  #main:before {
+    content: "";
+    height: 24px;
+    width: 12px;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    background: url("../images/pattern.jpg") #444;
+  }
+
+  section {
+    margin-bottom: 64px;
+  }
+
+  #indicator {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -2px;
+    padding-top: 16px;
+  }
+
+  /* left pointing arrow */
+  #indicator:before {
+    content: "▶";
+    font-size: 24px;
+    padding: 16px 0;
+    cursor: not-allowed;
+  }
+
+  @-moz-keyframes fadeInDown {
+    0%    {opacity: 0; -moz-transform: translateY(-30px);}
+    100%  {opacity: 1; -moz-transform: translateY(0);}
+  }
+
+  @-webkit-keyframes fadeInDown {
+    0%    {opacity: 0; -webkit-transform: translateY(-30px);}
+    100%  {opacity: 1; -webkit-transform: translateY(0);}
+  }
+
+  @-ms-keyframes fadeInDown {
+    0%    {opacity: 0; -ms-transform: translateY(-30px);}
+    100%  {opacity: 1; -ms-transform: translateY(0);}
+  }
+
+  @-o-keyframes fadeInDown {
+    0%    {opacity: 0; -o-transform: translateY(-30px);}
+    100%  {opacity: 1; -o-transform: translateY(0);}
+  }
+
+  @keyframes fadeInDown {
+    0%    {opacity: 0; transform: translateY(-30px);}
+    100%  {opacity: 1; transform: translateY(0);}
+  } 
+
+  #indicator {
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  #indicator div {
+    background: url("../images/pattern.jpg") #444;
+    width: 250px;
+    height: 190px;
+    position: absolute;
+    top: 62px;
+    left: -135px;
+    border: solid 6px #1a1a1a;
+    padding: 16px 8px 0;
+    text-align: center;
+    -moz-box-shadow: 0 10px 20px #111;
+    -webkit-box-shadow: 0 10px 20px #111;
+    box-shadow: 0 10px 20px #111;
+    opacity: 0;
+    z-index: -3;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+  }
+
+  /* up pointing arrow of popup */
+  #indicator div:before {
+    content: "▲";
+    font-size: 20px;
+    color: #1a1a1a;
+    position: absolute;
+    top: -23px;
+    left: 120px;
+  }
+
+  /* paperclip image */
+  #indicator div img {
+    display: block;
+    margin: 3px auto -18px; /* move paperclip down but keep same line height (16px) */
+  }
+
+  /* sad face on span ("yes") hover */
+  #indicator div span:hover:after {
+    content: " :(";
+  }
+
+  /* via jQuery, it changes class of div to "active", shows the popup, and animates the popup */
+  #indicator div.active {
+    z-index: 1;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+
+    -moz-animation: fadeInDown 1s;
+    -webkit-animation: fadeInDown 1s;
+    -ms-animation-name: fadeInDown 1s;
+    -o-animation-name: fadeInDown 1s;
+    animation: fadeInDown 1s;
+  }
+
+  @-moz-keyframes bounceIn {
+    0%    {opacity: 0; -moz-transform: scale(.3);}
+    50%   {opacity: 1; -moz-transform: scale(1.05);}
+    70%   {-moz-transform: scale(.9);}
+    100%  {-moz-transform: scale(1);}
+  }
+
+  @-webkit-keyframes bounceIn {
+    0%    {opacity: 0; -webkit-transform: scale(.3);}
+    50%   {opacity: 1; -webkit-transform: scale(1.05);}
+    70%   {-webkit-transform: scale(.9);}
+    100%  {-webkit-transform: scale(1);}
+  }
+
+  @-ms-keyframes bounceIn {
+    0%    {opacity: 0; -ms-transform: scale(.3);}
+    50%   {opacity: 1; -ms-transform: scale(1.05);}
+    70%   {-ms-transform: scale(.9);}
+    100%  {-ms-transform: scale(1);}
+  }
+
+  @-o-keyframes bounceIn {
+    0%    {opacity: 0; -o-transform: scale(.3);}
+    50%   {opacity: 1; -o-transform: scale(1.05);}
+    70%   {-o-transform: scale(.9);}
+    100%  {-o-transform: scale(1);}
+  }
+
+  @keyframes bounceIn {
+    0%    {opacity: 0; transform: scale(.3);}
+    50%   {opacity: 1; transform: scale(1.05);}
+    70%   {transform: scale(.9);}
+    100%  {transform: scale(1);}
+  } 
+
+  /* paperclip */
+  #indicator.haha:before {
+    content: "Want help with that, dude?";
+    color: #999;
+    font-size: 12px;
+    line-height: 1.8em;
+    width: 110px;
+    text-align: center;
+    display: block;
+    background: url("../images/paperclip.png") no-repeat top center, url("../images/pattern.jpg") #444;
+    padding: 69px 0 0;
+    cursor: not-allowed;
+    margin-left: -55px;
+    -moz-animation: bounceIn 1s;
+    -webkit-animation: bounceIn 1s;
+    -ms-animation-name: bounceIn 1s;
+    -o-animation-name: bounceIn 1s;
+    animation: bounceIn 1s;
+  }
+
+  #indicator.haha:hover:before {
+    content: "I’m not going away. You’re stuck with me!";
+  }
+
+  /* hide the arrow, hide popup (twice because using two different classes) */
+  #indicator.hide:before, #indicator.hide>div, #indicator.haha>div {
+    content: "";
+    display: none;
+  }
+
+  /* bigger padding and right aligned text (inherited from mobile layout) */
+  footer {
+    padding: 11% 20% 8%;
+    text-align: right;
+  }
+
+  /* no bottom margin (inherited from mobile layout) */
+  #footnotes {
+    width: 45%;
+    margin: -42px 5% 0 0;
+    float: left;
+    text-align: left;
+  }
+
+  /* the stars before the text */
+  #footnotes p span {
+    width: 20px;
+    display: block;
+    float: left;
+    margin: 0 10px 45px 0;
+    color: #ea4c89;
+    padding-top: 2px;
+  }
+
+  /* the small text has smaller width and is down 1 line more */
+  small {
+    width: 30%;
+    margin-top: 21px;
+  }
+
+  /* clearfix for the logo to be centred */
+  small:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* move logo down */
+  .logo {
+    margin-top: 66px;
+  }
+}
